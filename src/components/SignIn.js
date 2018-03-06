@@ -73,7 +73,7 @@ class SignInForm extends Component {
 				/>
 				<input
 					value={password}
-					onChange={event => this.setState(byPropKey('email', event.target.value))}
+					onChange={event => this.setState(byPropKey('password', event.target.value))}
 					type="password"
 					placeholder="Password"
 				/>

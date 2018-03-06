@@ -10,7 +10,7 @@ const SignUpPage = ({ history }) =>
 		<SignUpForm history={history} />
 	</div>
 
-const INITIAL_STATE = { //why use this instead of just using constructor?
+const INITIAL_STATE = {
 	username: '',
 	email: '',
 	passwordOne: '',
