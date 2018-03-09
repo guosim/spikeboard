@@ -1,15 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 
-const Navigation = ({ authUser }) =>
+const Navigation = (props, { authUser }) =>
 	<div>
 		{
 			authUser ? <NavigationAuth /> : <NavigationNonAuth />
 		}
 	</div>
+
 
 const NavigationAuth = () =>
 	<ul>
@@ -25,5 +27,7 @@ const NavigationNonAuth = () =>
 		<li><Link to={routes.SIGN_IN}>Sign In</Link></li>
 	</ul>
 
-
+Navigation.contextTypes = {
+	authUser: PropTypes.object
+}
 export default Navigation;
