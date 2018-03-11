@@ -12,7 +12,7 @@ const INITIAL_STATE = {
 	error: null
 };
 
-const PasswordChangeForm extends Component {
+class PasswordChangeForm extends Component {
 	constructor(props) {
 		super(props);
 
